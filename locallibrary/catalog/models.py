@@ -1,6 +1,10 @@
 from django.db import models
+from django.contrib import admin
 from django.urls import reverse
 import uuid
+from datetime import date
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 
@@ -13,6 +17,7 @@ class Genre(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return self.name
+
 # Book model
 class Book(models.Model):
     """
