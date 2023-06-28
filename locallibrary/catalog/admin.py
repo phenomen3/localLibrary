@@ -19,8 +19,12 @@ class AuthorAdmin(admin.ModelAdmin):
     #lay out
     fields=['first_name', 'last_name', ('date_of_birth','date_of_death')]
 
+class BookInstanceInline(admin.TabularInline):
+    model=BookInstance
+
 class BookAdmin(admin.ModelAdmin):
     list_display=('title','author','display_genre')
+    inlines = [BookInstanceInline]
 
 admin.site.register(Book,BookAdmin)
 
