@@ -51,6 +51,13 @@ class Book(models.Model):
         """
         return reverse('book-detail', args=[str(self.id)])
 
+    """function to display genre (DB accesibility)"""
+    def display_genre(self):
+        """Create a string for the Genre. This is required to display genre in Admin."""
+    return ', '.join(genre.name for genre in self.genre.all()[:3])
+
+    display_genre.short_description = 'Genre'
+
 # BookInstance model
 class BookInstance(models.Model):
     """
