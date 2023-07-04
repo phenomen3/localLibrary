@@ -1,16 +1,14 @@
 from django.test import TestCase
 
 # Create your tests here.
-
 class YourTestClass(TestCase):
-
     @classmethod
     def setUpTestData(cls):
-        print("setUpTestData: Ejecute una vez para configurar datos no modificados para todos los métodos de clase.")
+        print("setUpTestData: Run once to set up non-modified data for all class methods.")
         pass
 
     def setUp(self):
-        print("setUp: Ejecutar una vez por cada método de prueba para configurar datos limpios.")
+        print("setUp: Run once for every test method to setup clean data.")
         pass
 
     def test_false_is_false(self):
@@ -24,4 +22,3 @@ class YourTestClass(TestCase):
     def test_one_plus_one_equals_two(self):
         print("Method: test_one_plus_one_equals_two.")
         self.assertEqual(1 + 1, 2)
-
