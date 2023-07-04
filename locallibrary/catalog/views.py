@@ -61,9 +61,10 @@ def index(request):
 
 class BookListView(generic.ListView):
     model = Book
-    paginate = 10
+    #paginate = 10
     def get_queryset(self):
-        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+        return Book.objects.filter(title__icontains='metamorfosis')[:5] # Get 5 books containing the title metamorfosis
+
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get the context
         context = super(BookListView, self).get_context_data(**kwargs)
