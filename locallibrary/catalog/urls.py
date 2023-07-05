@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_Mq9DrT
 from django.urls import include
 from django.urls import re_path
 from django.urls import re_path as url
@@ -20,3 +21,15 @@ urlpatterns = [
 urlpatterns += [
     path('book/<uuid:pk>/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]
+=======
+from django.urls import include
+from django.urls import re_path
+from django.urls import re_path as url
+from django.conf.urls import url
+
+from . import views
+
+
+urlpatterns = [
+]
+>>>>>>> .merge_file_WmpSVz

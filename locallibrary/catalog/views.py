@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_xGhlTz
 from django.shortcuts import render
 from .models import Book, Author, BookInstance, Genre
 from django.views import generic
@@ -119,3 +120,8 @@ def renew_book_librarian(request, pk):
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Author
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> .merge_file_9Mul4X
