@@ -1,4 +1,4 @@
-# Django Tutorial
+# Django TutoriaL
 
 This repository contains the Django project "Local Library"
 
