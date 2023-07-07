@@ -24,5 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')), #relative url of catalog/urls.py
     path('', RedirectView.as_view(url='/catalog/', permanent = True)), #redirection of root IP
-    path('accounts/', include ('django.contrib.auth.urls'))
+ #   path('accounts/', include('django.contrib.auth.urls')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]

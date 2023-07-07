@@ -120,3 +120,15 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Author
 
+
+class AuthorListView(generic.ListView):
+    model = Author
+    paginate_by = 10
+    """
+    context_object_name = 'my_author_list'
+    queryset = Book.objects.filter(title__icontains='divina')[:5]
+    template_name = 'books/my_arbitrary_template_name_list.html'
+    """
+
+class AuthorDetailView(generic.DetailView):
+    model = Author
